@@ -35,8 +35,7 @@ app.get('/credit', (req, res) => {
     res.render('account', { account: accounts.credit });
 });
 
-app.get('/transfer', (req, res) => {  
-       res.render('transfer')});
+app.get('/transfer', (req, res) =>  res.render('transfer'));
 app.post('transfer', (req, res) => {
     accounts[req.body.from].balance = accounts[req.body.from].balance -
     req.body.amount;
