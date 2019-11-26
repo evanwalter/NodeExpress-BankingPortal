@@ -36,7 +36,7 @@ app.get('/credit', (req, res) => {
 });
 
 app.get('/transfer', (req, res) =>  res.render('transfer'));
-app.post('transfer', (req, res) => {
+app.post('/transfer', (req, res) => {
     accounts[req.body.from].balance = accounts[req.body.from].balance -
     req.body.amount;
     accounts[req.body.to].balance = parseInt(accounts[req.body.to].balance) +
